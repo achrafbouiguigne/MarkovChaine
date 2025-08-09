@@ -22,6 +22,10 @@ It’s a simple web app that shows states and transitions of a Markov chain, let
 
 Open the `index.html` in a browser and watch the Markov chain progress step by step. You can modify the probabilities or states in the code to explore different scenarios.
 
+## Live Demo
+
+Check out the live version here: [https://markov-chaine.vercel.app/](https://markov-chaine.vercel.app/)
+
 ---
 
 This project is a hands-on way to learn about Markov chains visually and interactively.
