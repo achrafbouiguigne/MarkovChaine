@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Markov Chain Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <h1>Markov Chain Visualizer</h1>
+
+  <div id="markovExplanation">
+    <strong>What’s a Markov Chain?</strong><br />
+    It’s a simple way to model systems that jump from one state to another. The important bit is that the next move depends only on where you are right now — not the whole path you took to get here. Each possible jump has a chance (or probability), and the system picks the next state randomly based on those chances.
+  </div>
+
+  <div id="markovExample">
+    <strong>Here’s a simple example:</strong><br />
+    Think about the weather — it can be <em>Sunny</em>, <em>Cloudy</em>, or <em>Rainy</em>. What the weather will be tomorrow depends only on what it is today, with certain chances:<br />
+    - If today is Sunny, there’s about a 70% chance it stays Sunny tomorrow, 20% chance it gets Cloudy, and 10% chance it rains.<br />
+    - If today is Cloudy, tomorrow might be Sunny 40% of the time, Cloudy 40%, or Rainy 20%.<br />
+    - If today is Rainy, tomorrow could be Sunny 30%, Cloudy 50%, or Rainy 20%.<br />
+    This kind o
+     situation is exactly what a Markov chain models — the next state depends only on the current one, not the whole history.
+  </div>
+  <div id="googleExample" style="max-width: 600px; margin: 10px auto 40px auto; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.4; background: #fff8e1; padding: 12px; border-left: 5px solid #fbc02d; border-radius: 4px; text-align: left;">
+  <strong>Another example — Google Search:</strong><br />
+  Think about how Google decides what page to show next. It looks at the current page and guesses what page you might visit next based only on that, not the whole browsing history. For instance:<br />
+  - From the homepage, you might click on News (50%), Images (30%), or Maps (20%).<br />
+  - From News, you might go back to Home (40%), go to Sports (40%), or Weather (20%).<br />
+  - From Images, you might go back to Home (60%) or to Shopping (40%).<br />
+  Just like a Markov chain, your next page depends only on where you are now, not how you got there.
+</div>
+
+   <div class="devcenter">
+  <div id="states">
+    <div class="state" id="stateA" style="top: 20px; left: 40px;">A</div>
+    <div class="state" id="stateB" style="top: 20px; left: 160px;">B</div>
+    <div class="state" id="stateC" style="top: 100px; left: 100px;">C</div>
+  </div>
+  </div>
+
+  <button id="nextStepBtn">Next Step</button>
+
+  <div id="currentState">Current State: <strong>A</strong></div>
+
+  <div id="explanation"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
